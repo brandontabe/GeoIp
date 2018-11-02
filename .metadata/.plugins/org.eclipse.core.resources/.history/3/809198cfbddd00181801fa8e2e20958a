@@ -1,0 +1,34 @@
+package com.geoIpPractical.lookup;
+
+import java.io.IOException;
+import java.util.Scanner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+import com.maxmind.geoip.LookupService;
+
+@SpringBootApplication
+public class GeoIpPracticalApplication {
+
+	public static void main(String[] args) throws IOException {
+		SpringApplication.run(GeoIpPracticalApplication.class, args);
+
+		@SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
+		CountryLookup cl = new CountryLookup();
+		LookupService lservice = new LookupService("../GeoIpPractical/src/main/resources/GeoIP.dat");
+
+		for(int a=0; a<3; a++) {
+		System.out.println("Please Enter An IP Address");
+		String ip = scan.nextLine();
+
+		cl.setIPAddress(ip);
+		
+
+		System.out.println(lservice.getCountry(ip).getName());
+		a=0;
+		}
+	}
+
+}

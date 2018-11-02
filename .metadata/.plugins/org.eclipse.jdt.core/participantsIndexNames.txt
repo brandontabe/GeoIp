@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+/home/brandon/Documents/workspace-sts-3.9.6.RELEASE 19.18.24/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4233432021.index
+/geoippractical/src/main/java
+/Users/admin/Documents/workspace-sts-3.9.6.RELEASE 19.18.24/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4233432021.index
+/geoippractical/src/main/java
+/home/brandon/Documents/workspace-sts-3.9.6.RELEASE 19.18.24/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/290089895.index
+/GeoIpPractical/src/main/java
+/Users/admin/Documents/workspace-sts-3.9.6.RELEASE 19.18.24/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3099868753.index
+/geoippractical/src/main/java
+/home/brandon/Documents/workspace-sts-3.9.6.RELEASE 19.18.24/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2615429934.index
+/GeoIpPractical/src/main/java

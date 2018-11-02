@@ -1,0 +1,39 @@
+package com.geoippractical.lookup;
+
+
+import java.io.IOException;
+
+import com.maxmind.geoip.Country;
+import com.maxmind.geoip.LookupService;
+
+//Author: Brandon Tabe
+//this is a custom class that contains setter and getter methods 
+//that will set and get the value from the variable.
+//The class also creates an object the LookupService and uses the path 
+//of the database as the parameter.
+//The LookUpService object created in the 
+
+
+public class CountryLookup  {
+	
+	
+	private String ipAddress;
+	
+	
+	
+	public String getIpAddress() {
+		return ipAddress;
+	}
+	public void setIpAddress(String ipAddress) {
+		this.ipAddress = ipAddress;
+	}
+	
+	public CountryLookup() throws IOException{
+		
+	}
+	
+	//The creation of this object allows us to create  
+	LookupService lookupService = new LookupService("../geoippractical/src/main/resources/GeoIP.dat", 
+			                                         LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
+	Country country = lookupService.getCountry(ipAddress);
+}

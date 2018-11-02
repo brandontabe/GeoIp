@@ -1,0 +1,37 @@
+package com.geoippractical.lookup;
+
+
+import java.io.IOException;
+import java.util.Scanner;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.maxmind.geoip.LookupService;
+
+//This class is one of the classes from the Spring Framework
+//This class contains the main method.
+// THis class will be used to test the application through the terminal before it is 
+//launched on the web.
+
+@SpringBootApplication
+public class GeoippracticalApplication {
+
+	public static void main(String[] args) throws IOException {
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		// The creation of this object allows us to test the application through the
+		// terminal.
+
+	    
+	    LookupService lookupService = new LookupService("../geoippractical/src/main/resources/GeoIP.dat",
+	    												LookupService.GEOIP_MEMORY_CACHE | LookupService.GEOIP_CHECK_CACHE);
+		System.out.println("Enter IP address");
+		String ipAddress = scanner.nextLine();
+		
+		System.out.println(lookupService.getCountry(ipAddress).getName());
+			
+		
+	}
+}
